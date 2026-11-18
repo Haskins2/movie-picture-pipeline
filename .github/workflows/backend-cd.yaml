@@ -13,6 +13,7 @@ env:
   AWS_REGION: us-east-1
   CLUSTER_NAME: cluster
   ECR_REPOSITORY: backend
+  CFLAGS: -std=gnu17
 
 defaults:
   run:

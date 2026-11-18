@@ -9,6 +9,10 @@ on:
       - '.github/workflows/backend-ci.yaml'
   workflow_dispatch:
 
+env:
+  # uWSGI 2.0.21 doesn't compile under C23 (newer GCC default); same fix as the Dockerfile
+  CFLAGS: -std=gnu17
+
 defaults:
   run:
     working-directory: starter/backend
